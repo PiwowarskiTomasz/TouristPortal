@@ -1,6 +1,8 @@
 package com.piwowarski.touristportal.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
@@ -8,8 +10,10 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @NotNull
+    @Size(min=2, max=30)
     private String name;
-    private String suranme;
+    private String surname;
     private String email;
     private String description;
     private String backgroundImg;
@@ -22,9 +26,9 @@ public class User {
     public User() {
     }
 
-    public User(String name, String suranme, String email, String description, String backgroundImg, String profileImg, String role) {
+    public User(String name, String surname, String email, String description, String backgroundImg, String profileImg, String role) {
         this.name = name;
-        this.suranme = suranme;
+        this.surname = surname;
         this.email = email;
         this.description = description;
         this.backgroundImg = backgroundImg;
@@ -64,12 +68,12 @@ public class User {
         this.name = name;
     }
 
-    public String getSuranme() {
-        return suranme;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSuranme(String suranme) {
-        this.suranme = suranme;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getEmail() {
@@ -119,7 +123,7 @@ public class User {
         User user = (User) o;
         return Objects.equals(id, user.id) &&
                 Objects.equals(name, user.name) &&
-                Objects.equals(suranme, user.suranme) &&
+                Objects.equals(surname, user.surname) &&
                 Objects.equals(email, user.email) &&
                 Objects.equals(description, user.description) &&
                 Objects.equals(backgroundImg, user.backgroundImg) &&
@@ -130,7 +134,7 @@ public class User {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, name, suranme, email, description, backgroundImg, profileImg, role);
+        return Objects.hash(id, name, surname, email, description, backgroundImg, profileImg, role);
     }
 
     @Override
@@ -138,7 +142,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", suranme='" + suranme + '\'' +
+                ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
                 ", description='" + description + '\'' +
                 ", backgroundImg='" + backgroundImg + '\'' +

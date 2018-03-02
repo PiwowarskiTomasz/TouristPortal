@@ -1,4 +1,4 @@
-package com.piwowarski.turistportal;
+package com.piwowarski.tourist;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TuristPortalApplicationTests {
+public class TouristPortalApplicationTests {
 
 	@Test
 	public void contextLoads() {

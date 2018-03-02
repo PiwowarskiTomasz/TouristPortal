@@ -43,6 +43,7 @@ public class MyWebSecurity extends WebSecurityConfigurerAdapter{
         http
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
+                .antMatchers("/registration","/registration-post").permitAll()
                 .antMatchers("/css/**", "/js/**", "/img/**", "/webjars/**").permitAll()
                 .anyRequest()
                 .authenticated()
