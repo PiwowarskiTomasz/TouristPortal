@@ -10,8 +10,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @NotNull
-    @Size(min=2, max=30)
+    //@NotNull
+    //@Size(min=2, max=30)
     private String name;
     private String surname;
     private String email;

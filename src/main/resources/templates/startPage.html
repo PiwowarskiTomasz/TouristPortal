@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8"/>
     <title>Tourist Portal</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.coHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
 </head>
 <body>
 
@@ -15,7 +16,8 @@
             <li class="navbar-item mr-3">
                 <a class="nav-link" href="/weather">Weather</a>
             </li>
-            <li class="navbar-item mr-3">
+            <li class="navbar-item mr-3">m/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEp
                 <a class="nav-link" href="/route">Route</a>
             </li>
             <div th:if="${user}">
@@ -32,6 +34,24 @@
     </nav>
 </header>
 <main role="main">
+
+    <!--<p>LOGGED USER DATA:</p>
+    <p>
+        USERNAME: <span sec:authentication="name"></span>
+    </p>
+    <p>
+        ROLES: <span sec:authentication="principal.authorities[0]"></span>
+    </p>
+    <div sec:authorize="isAuthenticated()">
+        This content is only shown to authenticated users.
+    </div>
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+        This content is only shown to administrators.
+    </div>
+    <div sec:authorize="hasRole('ROLE_USER')">
+        This content is only shown to users.
+    </div>-->
+
     <div class="container marketing">
 
         <div class="row featurette mt-5 ">
